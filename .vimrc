@@ -25,5 +25,6 @@ set wrap            		" Visual word wrapping
 set linebreak       		" Only break lines on 'breakat' characters
 
 set pastetoggle=<F3>		
+nmap <f2> :set number!<cr>
 set paste					" Don't autoitendent paste
 set mouse=					" Mouse=a will select in terminal

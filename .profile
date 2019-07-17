@@ -1,7 +1,7 @@
 export TZ="Europe/Paris"
 export EDITOR="vim"
 
-alias diskspace="du -S | sort -n -r |more"
+alias diskspace="du -Sh | sort -n -r |more"
 
 # Prompt
 export PS1="\[\033[38;5;9m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\]@[\[$(tput sgr0)\]\[\033[38;5;72m\]\h\[$(tput sgr0)\]\[\033[38;5;15m\]]:\w \[$(tput sgr0)\]\[\033[38;5;151m\]>\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"

@@ -1,4 +1,4 @@
-set nocompatible		        " Enable vim mode
+set nocompatible		        " Enable non-vi vim mode
 filetype plugin indent on	  " Load plugins according to filetype
 
 colorscheme torte	  " Easy to read colorscheme

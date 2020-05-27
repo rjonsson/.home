@@ -5,6 +5,13 @@
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
+if grep -q Microsoft /proc/version; then
+  echo "Ubuntu on Windows"
+  export PATH="$HOME/.local/bin:$PATH"
+else
+  echo "native Linux"
+fi
+
 # don't put duplicate lines in the history. See bash(1) for more options
 # ... or force ignoredups and ignorespace
 HISTCONTROL=ignoredups:ignorespace

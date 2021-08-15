@@ -34,3 +34,4 @@ nmap <f2> :set number!<cr>
 au! BufNewFile,BufReadPost *.{yaml,yml} set filetype=yaml
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 
+" Don't forget to install vim-gui-common (basically gvim) for system-clipboard

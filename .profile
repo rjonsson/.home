@@ -1,6 +1,16 @@
 export TZ="Europe/Paris"
 export EDITOR="vim"
 
+
+alias grep='grep -n'
+alias cd='pushd'
+alias pd='popd'
+
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+
 alias diskspace="du -Sh | sort -n -r |more"
 alias homefiles='/usr/bin/git --git-dir=$HOME/.home/ --work-tree=$HOME'
 

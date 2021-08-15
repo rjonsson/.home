@@ -1,0 +1,16 @@
+$include  /etc/inputrc
+
+# Non-audible bell
+set bell-style visible
+
+# Complete on first TAB
+set show-all-if-ambiguous on
+
+# Ignore case on complete
+set completion-ignore-case on
+
+# CTRL+Arrow word-jump 
+"\eOD": backward-word
+"\eOC": forward-word
+
+

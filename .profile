@@ -3,8 +3,6 @@ export EDITOR="vim"
 
 
 alias grep='grep -n'
-alias cd='pushd'
-alias pd='popd'
 
 alias ..='cd ..'
 alias ...='cd ../..'

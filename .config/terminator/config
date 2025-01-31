@@ -1,0 +1,93 @@
+[global_config]
+  borderless = True
+  broadcast_default = off
+  scroll_tabbar = True
+  inactive_color_offset = 0.7
+  enabled_plugins = LaunchpadBugURLHandler, LaunchpadCodeURLHandler, APTURLHandler, SaveLastSessionLayout
+  putty_paste_style = True
+  putty_paste_style_source_clipboard = True
+  new_tab_after_current_tab = True
+[keybindings]
+  cycle_next = ""
+  cycle_prev = ""
+  rotate_cw = ""
+  rotate_ccw = ""
+  split_auto = ""
+  split_horiz = ""
+  split_vert = ""
+  close_term = ""
+  copy = ""
+  paste = <Shift>Insert
+  close_window = ""
+  resize_up = ""
+  resize_down = ""
+  resize_left = ""
+  resize_right = ""
+  move_tab_right = ""
+  move_tab_left = ""
+  scaled_zoom = ""
+  next_tab = <Primary>Tab
+  prev_tab = <Primary><Shift>Tab
+  reset = ""
+  reset_clear = ""
+  hide_window = ""
+  group_all = ""
+  group_tab = ""
+  edit_window_title = ""
+  edit_tab_title = <Primary><Alt>w
+  edit_terminal_title = ""
+  preferences_keybindings = ""
+[profiles]
+  [[default]]
+    visible_bell = True
+    urgent_bell = True
+    icon_bell = False
+    background_color = "#0f0218"
+    cursor_shape = ibeam
+    foreground_color = "#c0bfbc"
+    show_titlebar = False
+    scrollback_infinite = True
+    copy_on_selection = True
+    title_hide_sizetext = True
+    title_transmit_bg_color = "#865e3c"
+[layouts]
+  [[default]]
+    [[[window0]]]
+      type = Window
+      parent = ""
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+  [[SaveLastSessionLayout]]
+    [[[child0]]]
+      type = Window
+      parent = ""
+      order = 0
+      position = 26:23
+      maximised = False
+      fullscreen = False
+      size = 3297, 797
+      title = config-api
+      last_active_window = True
+    [[[child1]]]
+      type = Notebook
+      parent = child0
+      order = 0
+      labels = rabbitmq-senseworks, None
+      last_active_term = 8d6040a6-3997-4963-862a-eb3ea2612673, 18b04a42-6941-4e66-8217-81219c664d9b
+      active_page = 0
+    [[[terminal2]]]
+      type = Terminal
+      parent = child1
+      order = 0
+      profile = default
+      uuid = 8d6040a6-3997-4963-862a-eb3ea2612673
+      directory = /home/jonssonri
+    [[[terminal3]]]
+      type = Terminal
+      parent = child1
+      order = 1
+      profile = default
+      uuid = 18b04a42-6941-4e66-8217-81219c664d9b
+      directory = /home/jonssonri/repos
+[plugins]

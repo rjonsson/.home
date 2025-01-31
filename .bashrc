@@ -54,7 +54,7 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1="\[\033[38;5;9m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\]@[\[$(tput sgr0)\]\[\033[38;5;72m\]\h\[$(tput sgr0)\]\[\033[38;5;15m\]]:\w \[$(tput sgr0)\]\[\033[38;5;151m\]>\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"
+	PS1='\[$(tput setaf 196)\]\u\[$(tput setaf 15)\]@[\[$(tput setaf 72)\]\h\[$(tput setaf 15)\]]:\[$(tput setaf 255)\]\w\[$(tput setaf 35)\]$(__git_ps1)\[$(tput sgr0)\] > '
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
@@ -112,3 +112,11 @@ shopt -u progcomp
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
+source /usr/share/bash-completion/bash_completion
+source <(kubectl completion bash)
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+PROMPT_COMMAND='echo -en "\033]0; $("pwd") \a"'

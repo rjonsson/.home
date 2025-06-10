@@ -1,0 +1,64 @@
+{
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.patterns": {
+    "jest.config.js": "jest.config.js, jest.*.config.js",
+    "tsconfig.json": "tsconfig.*.json, env.d.ts",
+    "vite.config.*": "jsconfig*, vitest.config.*, cypress.config.*, playwright.config.*",
+    "package.json": "package-lock.json, pnpm*, .yarnrc*, yarn*, .eslint*, eslint*, .prettier*, prettier*, .editorconfig"
+  },
+  "editor.renderWhitespace": "all",
+  "workbench.colorCustomizations": {
+    "editorWhitespace.foreground": "#fbff0028"
+  },
+  "editor.guides.bracketPairs": true,
+  "editor.guides.highlightActiveIndentation": true,
+  "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
+  "editor.formatOnType": false, // required
+  "editor.formatOnPaste": true, // optional
+  "editor.formatOnSave": true, // optional
+  "editor.formatOnSaveMode": "file", // required to format on save
+  "files.autoSave": "onFocusChange", // optional but recommended
+  "vs-code-prettier-eslint.prettierLast": true, // set as "true" to run 'prettier' last not first
+  "files.trimTrailingWhitespace": true,
+  "editor.codeActionsOnSave": {
+    "source.removeUnusedImports": "never",
+    "source.fixAll.eslint": "explicit",
+  },
+  "eslint.run": "onSave",
+  "[typescript]": {
+    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "[json][jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[css][scss][less]": {
+    "editor.defaultFormatter": "vscode.css-language-features"
+  },
+  "[markdown]": {
+    "files.trimTrailingWhitespace": false
+  },
+  "redhat.telemetry.enabled": false,
+  "git.blame.statusBarItem.enabled": true,
+  "git.blame.editorDecoration.enabled": true,
+  "debug.javascript.autoAttachFilter": "disabled",
+  "workbench.colorTheme": "Monokai",
+  "yaml.schemas": {
+    "https://raw.githubusercontent.com/argoproj/argo-workflows/main/api/jsonschema/schema.json": "workflows/workflows/**/*.yaml"
+  },
+  // "emeraldwalk.runonsave": {
+  //     "commands": [
+  //         {
+  //             "match": "\\.tf*",
+  //             "cmd": "terraform fmt ${fileDirname}"
+  //         },
+  //         {
+  //             "match": "\\.hcl",
+  //             "cmd": "terragrunt hclfmt ${fileDirname}"
+  //         }
+  //     ]
+  // },
+  "editor.stickyScroll.enabled": false,
+}

@@ -1,5 +1,5 @@
 [global_config]
-  borderless = True
+  geometry_hinting = True
   broadcast_default = off
   scroll_tabbar = True
   inactive_color_offset = 0.7
@@ -13,9 +13,9 @@
   rotate_cw = ""
   rotate_ccw = ""
   split_auto = ""
-  split_horiz = ""
-  split_vert = ""
-  close_term = ""
+  split_horiz = <Primary><Shift><Alt>s
+  split_vert = <Primary><Alt>s
+  close_term = <Primary><Shift>w
   copy = ""
   paste = <Shift>Insert
   close_window = ""
@@ -23,8 +23,8 @@
   resize_down = ""
   resize_left = ""
   resize_right = ""
-  move_tab_right = ""
-  move_tab_left = ""
+  move_tab_right = <Primary><Shift>Page_Down
+  move_tab_left = <Primary><Shift>Page_Up
   scaled_zoom = ""
   next_tab = <Primary>Tab
   prev_tab = <Primary><Shift>Tab
@@ -34,14 +34,13 @@
   group_all = ""
   group_tab = ""
   edit_window_title = ""
-  edit_tab_title = <Primary><Alt>w
+  edit_tab_title = <Primary><Shift><Alt>e
   edit_terminal_title = ""
   preferences_keybindings = ""
 [profiles]
   [[default]]
     visible_bell = True
     urgent_bell = True
-    icon_bell = False
     background_color = "#0f0218"
     cursor_shape = ibeam
     foreground_color = "#c0bfbc"
@@ -52,12 +51,23 @@
     title_transmit_bg_color = "#865e3c"
 [layouts]
   [[default]]
-    [[[window0]]]
+    [[[child0]]]
       type = Window
       parent = ""
-    [[[child1]]]
+      order = 0
+      position = 26:23
+      maximised = False
+      fullscreen = False
+      size = 1461, 847
+      title = " /home/jonssonri "
+      last_active_term = f41ec836-0892-4091-a51b-ba3e7c86afbe
+      last_active_window = True
+    [[[terminal1]]]
       type = Terminal
-      parent = window0
+      parent = child0
+      order = 0
+      profile = default
+      uuid = f41ec836-0892-4091-a51b-ba3e7c86afbe
   [[SaveLastSessionLayout]]
     [[[child0]]]
       type = Window
@@ -66,28 +76,56 @@
       position = 26:23
       maximised = False
       fullscreen = False
-      size = 3297, 797
-      title = config-api
+      size = 2483, 848
+      title = " /home/jonssonri "
       last_active_window = True
     [[[child1]]]
       type = Notebook
       parent = child0
       order = 0
-      labels = rabbitmq-senseworks, None
-      last_active_term = 8d6040a6-3997-4963-862a-eb3ea2612673, 18b04a42-6941-4e66-8217-81219c664d9b
+      labels = None, None, None, None, None, None
+      last_active_term = f41ec836-0892-4091-a51b-ba3e7c86afbe, 630a8859-2a07-4eb1-ba69-e41b60175a84, 40001a16-3ff2-4ec5-af3e-67d3c943b98e, 6d419675-2f0f-4209-8236-c0634925d3b0, 028be7b2-657f-4275-8703-01c3a046b6ab, 1dcdc495-e5c2-43b2-b8ac-c680617f4603
       active_page = 0
     [[[terminal2]]]
       type = Terminal
       parent = child1
       order = 0
       profile = default
-      uuid = 8d6040a6-3997-4963-862a-eb3ea2612673
-      directory = /home/jonssonri
+      uuid = f41ec836-0892-4091-a51b-ba3e7c86afbe
+      directory = /home/jonssonri/repos/cluster-helm-charts/add-ons/ingress-nginx
     [[[terminal3]]]
       type = Terminal
       parent = child1
       order = 1
       profile = default
-      uuid = 18b04a42-6941-4e66-8217-81219c664d9b
-      directory = /home/jonssonri/repos
+      uuid = 630a8859-2a07-4eb1-ba69-e41b60175a84
+      directory = /home/jonssonri/repos/config-api-main
+    [[[terminal4]]]
+      type = Terminal
+      parent = child1
+      order = 2
+      profile = default
+      uuid = 40001a16-3ff2-4ec5-af3e-67d3c943b98e
+      directory = /home/jonssonri/repos/external-api
+    [[[terminal5]]]
+      type = Terminal
+      parent = child1
+      order = 3
+      profile = default
+      uuid = 6d419675-2f0f-4209-8236-c0634925d3b0
+      directory = /home/jonssonri/repos/link-local/docker-compose
+    [[[terminal6]]]
+      type = Terminal
+      parent = child1
+      order = 4
+      profile = default
+      uuid = 028be7b2-657f-4275-8703-01c3a046b6ab
+      directory = /home/jonssonri/repos/extractloader-tax-skatteverket
+    [[[terminal7]]]
+      type = Terminal
+      parent = child1
+      order = 5
+      profile = default
+      uuid = 1dcdc495-e5c2-43b2-b8ac-c680617f4603
+      directory = /home/jonssonri/repos/saas-envs-qa
 [plugins]

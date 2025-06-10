@@ -1,0 +1,33 @@
+// Place your key bindings in this file to override the defaults
+[
+    {
+        "command": "runCommands",
+        "key": "alt+[ArrowLeft]", // whatever keybinding
+        "args": {
+            "commands": [
+                // commands to run in sequence
+                "workbench.action.focusSideBar",
+                "workbench.action.decreaseViewSize"
+            ]
+        }
+    },
+    {
+        "command": "runCommands",
+        "key": "alt+[ArrowRight]", // whatever keybinding
+        "args": {
+            "commands": [
+                // commands to run in sequence
+                "workbench.action.focusSideBar",
+                "workbench.action.increaseViewSize"
+            ]
+        }
+    },
+    {
+        "key": "ctrl+tab",
+        "command": "workbench.action.nextEditor"
+    },
+    {
+        "key": "ctrl+shift+tab",
+        "command": "workbench.action.previousEditor"
+    }
+]
